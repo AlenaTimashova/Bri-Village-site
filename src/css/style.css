@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1A3A27;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1A3A27;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #4EA366;
+}
+a:focus {
+  color: #4EA366;
+}
+a:active {
+  color: #2A7941;
+}
+a:disabled {
+  color: #C9DACE;
+}
+
+ul {
+  list-style: none;
+}
+
+.center {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 212px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.625rem;
+}
+.menu__link {
+  padding: 0rem 0.9375rem;
+}
+
+.button {
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 170%;
+  letter-spacing: 0.04375rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background-color: #3B9254;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #4EA366;
+}
+.button:focus {
+  background-color: #4EA366;
+}
+.button:active {
+  background-color: #2A7941;
+}
+.button:disabled {
+  background-color: #C9DACE;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.header__phone-link {
+  display: flex;
+  height: 3.5rem;
+  padding: 0rem 0.9375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.slider-box {
+  background-color: #3B9254;
+  position: relative;
+  overflow: hidden;
+}
+.slider-box__content {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  padding: 15rem 15rem 10rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+.slider-box__header {
+  color: #FFF;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+.slider-box__subtitle {
+  color: #FFF;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 1.75rem;
+}
+.slider-box__button {
+  pointer-events: all;
+}
+
+.swiper-container {
+  background-color: #4EA366;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+$colorMain_dark: #1A3A27
+$colorMain_light: #fff
+$colorHero: #3B9254
+$colorHoverFocus: #4EA366
+$colorClick: #2A7941
+$colorDisabled: #C9DACE
+$colorTextDisabled: #859F8D
+$colorButton_dark: #232120
+$DesktopWidthSite: 1180px
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    color: $colorMain_dark
+    font-family: "Lato", sans-serif
+
+a
+    text-decoration: none
+    color: $colorMain_dark
+    transition: color 0.3s ease-in-out
+    &:hover
+        color: $colorHoverFocus
+    &:focus
+        color: $colorHoverFocus
+    &:active
+        color: $colorClick
+    &:disabled
+        color: $colorDisabled
+
+ul
+    list-style: none
+
+.center
+    max-width: $DesktopWidthSite
+    margin: 0 auto
+
+.logo
+    width: 212px
+
+.menu
+    display: flex
+    gap: 0.625rem
+    &__link
+        padding: 0rem 0.9375rem
+
+.button
+    color: $colorMain_light
+    font-size: 0.875rem
+    font-style: normal
+    font-weight: 600
+    line-height: 170%
+    letter-spacing: 0.04375rem
+    text-transform: uppercase
+    padding: 1rem 2rem
+    background-color: $colorHero
+    border: none
+    border-radius: 0.625rem
+    cursor: pointer
+    transition: background-color 0.3s ease-in-out
+    &:hover
+        background-color: $colorHoverFocus
+    &:focus
+        background-color: $colorHoverFocus
+    &:active
+        background-color: $colorClick
+    &:disabled
+        background-color: $colorDisabled
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1rem 0
+    &__phone-link
+        display: flex
+        height: 3.5rem
+        padding: 0rem 0.9375rem
+        justify-content: center
+        align-items: center
+        gap: 0.625rem
+        flex-shrink: 0
+
+.slider-box
+    background-color: $colorHero
+    position: relative
+    overflow: hidden
+    &__content
+        position: relative
+        top: 0
+        z-index: 2
+        padding: 15rem 15rem 10rem 15rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        pointer-events: none
+
+    &__header
+        color: #FFF
+        text-align: center
+        font-family: Unbounded
+        font-size: 3.5rem
+        font-style: normal
+        font-weight: 600
+        line-height: 110%
+    &__subtitle
+        color: #FFF
+        text-align: center
+        font-family: Unbounded
+        font-size: 1.25rem
+        font-style: normal
+        font-weight: 500
+        line-height: 150%
+        margin-bottom: 1.75rem
+    &__button
+        pointer-events: all
+
+.swiper-container
+    background-color: $colorHoverFocus
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+
+.swiper-slide
+    height: 100%
+
+.swiper-img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
