@@ -149,4 +149,29 @@ ul {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  width: 2.5rem;
+}
+
+.swiper-button-next {
+  right: 2rem;
+}
+.swiper-button-next:after {
+  content: url(/src/img/silderBtnRight.svg);
+}
+
+.swiper-button-prev {
+  left: 2rem;
+}
+.swiper-button-prev:after {
+  content: url(/src/img/silderBtnLeft.svg);
 }/*# sourceMappingURL=style.css.map */

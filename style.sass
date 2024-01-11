@@ -133,3 +133,24 @@ ul
     width: 100%
     height: 100%
     object-fit: cover
+
+.swiper-pagination-bullet
+    width: 1.5625rem
+    height: 0.1875rem
+    border-radius: 0
+    background-color: $colorMain_light
+
+.swiper-pagination-bullet-active
+    width: 2.5rem
+
+.swiper-button-next
+    right: 2rem
+    &:after
+        content: url(/src/img/silderBtnRight.svg)
+
+.swiper-button-prev
+    left: 2rem
+    &:after
+        content: url(/src/img/silderBtnLeft.svg)
+
+    //TO DO сделать эффект наведения на кнопки в слайдере
