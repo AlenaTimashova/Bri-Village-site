@@ -1,4 +1,117 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 15px;
+}
+
+.slider-box {
+  background-color: #3B9254;
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px;
+}
+.slider-box__content {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 15rem 10rem 15rem;
+  pointer-events: none;
+}
+.slider-box__header {
+  color: #fff;
+  text-align: center;
+  font-family: "Unbounded";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+.slider-box__subtitle {
+  color: #fff;
+  text-align: center;
+  font-family: "Unbounded";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 1.75rem;
+}
+.slider-box__button {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  pointer-events: all;
+}
+.slider-box__button::after {
+  content: url(/src/img/calendar_icon.svg);
+  font-size: 28px;
+}
+.slider-box_rent {
+  height: 520px;
+  margin-bottom: 34px;
+}
+
+.swiper-container {
+  background-color: #C9DACE;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  width: 2.5rem;
+}
+
+.swiper-button-next {
+  right: 2rem;
+}
+.swiper-button-next:after {
+  content: url(/src/img/silderBtnRight.svg);
+}
+
+.swiper-button-prev {
+  left: 2rem;
+}
+.swiper-button-prev:after {
+  content: url(/src/img/silderBtnLeft.svg);
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -31,9 +144,14 @@ ul {
   list-style: none;
 }
 
-.center {
-  max-width: 1180px;
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .logo {
@@ -75,6 +193,13 @@ ul {
 .button:disabled {
   background-color: #C9DACE;
 }
+.button_dark {
+  background-color: #232120;
+}
+
+svg path {
+  transition: fill 0.3s ease-in-out;
+}
 
 .header {
   display: flex;
@@ -91,87 +216,71 @@ ul {
   gap: 0.625rem;
   flex-shrink: 0;
 }
+.header__phone-link:hover svg path {
+  fill: #4EA366;
+}
+.header__phone-link:active svg path {
+  fill: #2A7941;
+}
 
-.slider-box {
-  background-color: #3B9254;
-  position: relative;
-  overflow: hidden;
+.hero-slider {
+  margin-bottom: 80px;
 }
-.slider-box__content {
-  position: relative;
-  top: 0;
-  z-index: 2;
-  padding: 15rem 15rem 10rem 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: none;
+
+.book {
+  border-radius: 0.625rem;
+  background: linear-gradient(92deg, #24733B 0%, #429058 19.79%, #2E7B44 31.77%, #44945B 46.88%, #2E7B44 58.33%, #408F57 71.35%, #18622E 100%);
+  padding: 1.75rem 2.5rem 2.5rem;
+  margin-bottom: 80px;
 }
-.slider-box__header {
-  color: #FFF;
-  text-align: center;
-  font-family: Unbounded;
-  font-size: 3.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 110%;
-}
-.slider-box__subtitle {
-  color: #FFF;
-  text-align: center;
+.book__heading {
+  color: #fff;
   font-family: Unbounded;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  margin-bottom: 1.75rem;
-}
-.slider-box__button {
-  pointer-events: all;
+  margin-bottom: 1.37rem;
 }
 
-.swiper-container {
-  background-color: #4EA366;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+.show-houses {
+  margin-bottom: 80px;
+}
+.show-houses__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+.show-houses__pics {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.show-houses__pic:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.show-houses__pic:nth-child(4), .show-houses__pic:nth-child(5) {
+  grid-column: span 2;
 }
 
-.swiper-slide {
-  height: 100%;
+.rent {
+  border-radius: 10px;
+  background: #F0E7D9;
+  padding: 40px;
+  margin-bottom: 80px;
 }
-
-.swiper-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.swiper-pagination-bullet {
-  width: 1.5625rem;
-  height: 0.1875rem;
-  border-radius: 0;
-  background-color: #fff;
-}
-
-.swiper-pagination-bullet-active {
-  width: 2.5rem;
-}
-
-.swiper-button-next {
-  right: 2rem;
-}
-.swiper-button-next:after {
-  content: url(/src/img/silderBtnRight.svg);
-}
-
-.swiper-button-prev {
-  left: 2rem;
-}
-.swiper-button-prev:after {
-  content: url(/src/img/silderBtnLeft.svg);
+.rent__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */

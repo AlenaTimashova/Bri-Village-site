@@ -8,10 +8,11 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="src/fonts/stylesheet.css" />
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <header class="header center">
+    <header class="header container">
       <a href="index.html" class="logo">
         <img src="src/img/logo.svg" alt="лого" />
       </a>
@@ -53,20 +54,20 @@
       </p>
       <button class="button">Забронировать</button>
     </header>
-    <section class="slider-box center">
-      <!-- Slider main container -->
+
+    <section class="slider-box container hero-slider">
       <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="src/img/main-pic-bg.png" alt="main-pic-bg" />
+            <img src="src/img/main-pic-bg.png" alt="1" class="swiper-img" />
           </div>
           <div class="swiper-slide">
-            <img src="src/img/main-pic-bg.png" alt="main-pic-bg" />
+            <img src="src/img/showHouses4.png" alt="1" class="swiper-img" />
           </div>
           <div class="swiper-slide">
-            <img src="src/img/main-pic-bg.png" alt="main-pic-bg" />
+            <img src="src/img/showHouses5.png" alt="1" class="swiper-img" />
           </div>
         </div>
         <!-- If we need pagination -->
@@ -83,6 +84,73 @@
           небом
         </h2>
         <button class="button slider-box__button">Забронировать домик</button>
+      </div>
+    </section>
+
+    <section class="book container">
+      <h2 class="book__heading">Забронировать домик</h2>
+    </section>
+
+    <section class="show-houses container">
+      <h2 class="show-houses__heading">Лучшие домики на природе</h2>
+      <div class="show-houses__pics">
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses1.png"
+          alt="домик"
+        />
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses2.png"
+          alt="домик"
+        />
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses3.png"
+          alt="домик"
+        />
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses4.png"
+          alt="домик"
+        />
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses5.png"
+          alt="домик"
+        />
+        <img
+          class="show-houses__pic"
+          src="src/img/showHouses6.png"
+          alt="домик"
+        />
+        <img src="src/img/showHouses7.png" alt="домик" />
+      </div>
+    </section>
+    <section class="rent container">
+      <h2 class="rent__heading">Аренда домиков на глэмпинге</h2>
+      <div class="slider-box slider-box_rent">
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="src/img/main-pic-bg.png" alt="1" class="swiper-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="src/img/showHouses4.png" alt="1" class="swiper-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="src/img/showHouses5.png" alt="1" class="swiper-img" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </section>
 

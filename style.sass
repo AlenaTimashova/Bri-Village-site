@@ -6,8 +6,18 @@ $colorClick: #2A7941
 $colorDisabled: #C9DACE
 $colorTextDisabled: #859F8D
 $colorButton_dark: #232120
-$DesktopWidthSite: 1180px
+$DesktopWidthSite: 1200px
+$sectionGap: 80px
 
+@import 'slider'
+
+@mixin section-heading
+    color: $colorMain_dark
+    font-family: Unbounded
+    font-size: 36px
+    font-style: normal
+    font-weight: 400
+    line-height: 140%
 *
     padding: 0
     margin: 0
@@ -15,7 +25,7 @@ $DesktopWidthSite: 1180px
 
 body
     color: $colorMain_dark
-    font-family: "Lato", sans-serif
+    font-family: 'Lato', sans-serif
 
 a
     text-decoration: none
@@ -33,9 +43,13 @@ a
 ul
     list-style: none
 
-.center
+img
+    width: 100%
+
+.container
     max-width: $DesktopWidthSite
     margin: 0 auto
+    padding: 0 10px
 
 .logo
     width: 212px
@@ -68,6 +82,11 @@ ul
         background-color: $colorClick
     &:disabled
         background-color: $colorDisabled
+    &_dark
+        background-color: $colorButton_dark
+
+svg path
+        transition: fill 0.3s ease-in-out
 
 .header
     display: flex
@@ -82,75 +101,50 @@ ul
         align-items: center
         gap: 0.625rem
         flex-shrink: 0
+        &:hover svg path
+            fill: $colorHoverFocus
+        &:active svg path
+            fill: $colorClick
 
-.slider-box
-    background-color: $colorHero
-    position: relative
-    overflow: hidden
-    &__content
-        position: relative
-        top: 0
-        z-index: 2
-        padding: 15rem 15rem 10rem 15rem
-        display: flex
-        flex-direction: column
-        align-items: center
-        pointer-events: none
+.hero-slider
+    margin-bottom: 80px
 
-    &__header
-        color: #FFF
-        text-align: center
-        font-family: Unbounded
-        font-size: 3.5rem
-        font-style: normal
-        font-weight: 600
-        line-height: 110%
-    &__subtitle
-        color: #FFF
-        text-align: center
+.book
+    border-radius: 0.625rem
+    background: linear-gradient(92deg, #24733B 0%, #429058 19.79%, #2E7B44 31.77%, #44945B 46.88%, #2E7B44 58.33%, #408F57 71.35%, #18622E 100%)
+    padding: 1.75rem 2.5rem 2.5rem
+    margin-bottom: $sectionGap
+    &__heading
+        color: $colorMain_light
         font-family: Unbounded
         font-size: 1.25rem
         font-style: normal
         font-weight: 500
         line-height: 150%
-        margin-bottom: 1.75rem
-    &__button
-        pointer-events: all
+        margin-bottom: 1.37rem
 
-.swiper-container
-    background-color: $colorHoverFocus
-    position: absolute
-    left: 0
-    top: 0
-    height: 100%
-    width: 100%
+.show-houses
+    margin-bottom: $sectionGap
+    &__heading
+        @include section-heading
+        margin-bottom: 40px
+    &__pics
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: auto
+        gap: 20px
+    &__pic
+        &:nth-child(3)
+            grid-column: span 2
+            grid-row: span 2
+        &:nth-child(4), &:nth-child(5)
+            grid-column: span 2
 
-.swiper-slide
-    height: 100%
-
-.swiper-img
-    display: block
-    width: 100%
-    height: 100%
-    object-fit: cover
-
-.swiper-pagination-bullet
-    width: 1.5625rem
-    height: 0.1875rem
-    border-radius: 0
-    background-color: $colorMain_light
-
-.swiper-pagination-bullet-active
-    width: 2.5rem
-
-.swiper-button-next
-    right: 2rem
-    &:after
-        content: url(/src/img/silderBtnRight.svg)
-
-.swiper-button-prev
-    left: 2rem
-    &:after
-        content: url(/src/img/silderBtnLeft.svg)
-
-    //TO DO сделать эффект наведения на кнопки в слайдере
+.rent
+    border-radius: 10px
+    background: #F0E7D9
+    padding: 40px
+    margin-bottom: $sectionGap
+    &__heading
+        @include section-heading
+        margin-bottom: 30px
