@@ -283,4 +283,50 @@ svg path {
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 30px;
+}
+.rent__info {
+  display: flex;
+  justify-content: space-between;
+}
+.rent__content {
+  width: 73%;
+}
+.rent__price {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.rent__price-info {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 4px 14px;
+}
+.rent__desc {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.rent__btn {
+  align-self: center;
+}
+.rent__btn:hover {
+  color: #fff;
+}
+.rent__btn:focus {
+  background-color: #4EA366;
+}
+.rent__btn:active {
+  background-color: #2A7941;
+}
+.rent__btn:disabled {
+  background-color: #C9DACE;
+}
+.rent__btn_dark {
+  background-color: #232120;
 }/*# sourceMappingURL=style.css.map */
