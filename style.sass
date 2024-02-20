@@ -32,13 +32,13 @@ a
     color: $colorMain_dark
     transition: color 0.3s ease-in-out
     &:hover
-        color: $colorHoverFocus
+        color: $colorHero
     &:focus
-        color: $colorHoverFocus
+        color: $colorHero
     &:active
-        color: $colorClick
+        color: $colorHero
     &:disabled
-        color: $colorDisabled
+        color: $colorHero
 
 ul
     list-style: none
@@ -174,12 +174,78 @@ svg path
     &__btn
         align-self: center
         &:hover
-            color: $colorMain_light
+            color: $colorHoverFocus
         &:focus
-            $colorMain_light
+            color: $colorHoverFocus
         &:active
-            $colorMain_light
+            color: $colorClick
         &:disabled
-            $colorMain_light
-        &_dark
-            $colorMain_light
+            color: $colorDisabled
+
+.servicesOffers
+    margin-bottom: $sectionGap
+    &__heading
+        @include section-heading
+        margin-bottom: 40px
+.services
+    &__images
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        margin-bottom: 80px
+    &__image
+        width: 30%
+    &__image-desc
+        font-family: Unbounded
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+    &__btns
+        display: flex
+        gap: 10px
+        margin-bottom: 30px
+    &__btn
+        background-color: #EAF5ED
+        color: $colorClick
+        display: flex
+        align-items: center
+        gap: 12px
+
+.offer
+    &__item
+        display: block
+        padding: 30px
+        padding-bottom: 50px
+        background-color: #F6F6F6
+        margin-bottom: 10px // исправить потом на gap
+    &__item-img
+        width: 40px
+        color: $colorMain_dark
+        margin-bottom: 20px
+    &__item-text
+        color: $colorMain_dark
+        font-family: Unbounded
+        font-size: 16px
+        font-weight: 500
+
+.infrastructure
+    margin-bottom: $sectionGap
+    &__heading
+        @include section-heading
+    &__card
+        position: relative
+        border-radius: 10px //не работает, на слайд попробовать
+        width: 280px //убрать потом в слайд
+        margin-bottom: 30px
+    &__card-img
+        display: block
+        object-fit: cover
+    &__card-desc
+        position: absolute
+        bottom: 20px
+        left: 20px
+        font-family: Unbounded
+        font-size: 20px
+        font-weight: 400
+        color: $colorMain_light

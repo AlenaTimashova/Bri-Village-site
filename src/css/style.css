@@ -128,16 +128,16 @@ a {
   transition: color 0.3s ease-in-out;
 }
 a:hover {
-  color: #4EA366;
+  color: #3B9254;
 }
 a:focus {
-  color: #4EA366;
+  color: #3B9254;
 }
 a:active {
-  color: #2A7941;
+  color: #3B9254;
 }
 a:disabled {
-  color: #C9DACE;
+  color: #3B9254;
 }
 
 ul {
@@ -316,17 +316,107 @@ svg path {
   align-self: center;
 }
 .rent__btn:hover {
-  color: #fff;
+  color: #4EA366;
 }
 .rent__btn:focus {
-  background-color: #4EA366;
+  color: #4EA366;
 }
 .rent__btn:active {
-  background-color: #2A7941;
+  color: #2A7941;
 }
 .rent__btn:disabled {
-  background-color: #C9DACE;
+  color: #C9DACE;
 }
-.rent__btn_dark {
-  background-color: #232120;
+
+.servicesOffers {
+  margin-bottom: 80px;
+}
+.servicesOffers__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+
+.services__images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+.services__image {
+  width: 30%;
+}
+.services__image-desc {
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.services__btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.services__btn {
+  background-color: #EAF5ED;
+  color: #2A7941;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.offer__item {
+  display: block;
+  padding: 30px;
+  padding-bottom: 50px;
+  background-color: #F6F6F6;
+  margin-bottom: 10px;
+}
+.offer__item-img {
+  width: 40px;
+  color: #1A3A27;
+  margin-bottom: 20px;
+}
+.offer__item-text {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.infrastructure {
+  margin-bottom: 80px;
+}
+.infrastructure__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.infrastructure__card {
+  position: relative;
+  border-radius: 10px;
+  width: 280px;
+  margin-bottom: 30px;
+}
+.infrastructure__card-img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.infrastructure__card-desc {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
