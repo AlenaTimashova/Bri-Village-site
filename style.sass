@@ -26,6 +26,8 @@ $sectionGap: 80px
 body
     color: $colorMain_dark
     font-family: 'Lato', sans-serif
+    font-weight: 400
+    font-size: 18px
 
 a
     text-decoration: none
@@ -231,16 +233,20 @@ svg path
 
 .infrastructure
     margin-bottom: $sectionGap
+    &__cards-box
+        display: flex
+        gap: 10px
     &__heading
         @include section-heading
+        margin-bottom: 40px
     &__card
         position: relative
-        border-radius: 10px //не работает, на слайд попробовать
         width: 280px //убрать потом в слайд
         margin-bottom: 30px
     &__card-img
         display: block
         object-fit: cover
+        border-radius: 10px
     &__card-desc
         position: absolute
         bottom: 20px
@@ -249,3 +255,97 @@ svg path
         font-size: 20px
         font-weight: 400
         color: $colorMain_light
+
+.about
+    margin-bottom: $sectionGap
+    display: flex
+    justify-content: space-between
+    &__content
+        max-width: 47%
+    &__heading
+        @include section-heading
+        margin-bottom: 20px
+    &__text
+        margin-bottom: 30px
+    &__btn
+        display: inline-block
+
+    &__slider
+        width: 47%
+
+.advantages
+    margin-bottom: $sectionGap
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__card-box
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        margin-bottom: 40px
+    &__card
+        border: 1px solid #eee
+        border-radius: 10px
+        padding: 20px 30px
+        width: 49%
+        background: #f8f8f8
+        & > svg
+            margin-bottom: 15px
+
+.help
+    border-radius: 10px
+    background: linear-gradient(135deg, #24733b 0%, #429058 19.79%, #2e7b44 31.77%, #44945b 46.88%, #2e7b44 58.33%, #408f57 71.35%, #18622e 100%)
+    display: flex
+    gap: 60px
+    align-items: center
+    padding: 35px 40px
+    margin-bottom: $sectionGap
+
+    &__img
+        border-radius: 10px
+        width: 210px
+    &__heading
+        font-family: "Unbounded", sans-serif
+        font-weight: 400
+        font-size: 28px
+        line-height: 140%
+        text-align: center
+        color: #fff
+
+.book-help
+    margin-bottom: $sectionGap
+    border-radius: 10px
+    background: #f0e7d9
+    padding: 60px
+    background-image: url("/src/img/book-help__background.png")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right 0
+    &__heading
+        @include section-heading
+        font-size: 28px
+        margin-bottom: 40px
+    &__form
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        width: 665px
+        gap: 10px
+    &__form-input
+        border: 1px solid #eee
+        border-radius: 10px
+        padding: 14px 15px
+        width: 327px
+        color: #949895
+        font-family: 'Lato', sans-serif
+        font-weight: 400
+        font-size: 18px
+    &__text
+        font-style: italic
+        font-size: 15px
+        line-height: 150%
+        color: #948d82
+    &__agreement-link
+        font-weight: 700
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: #948d82
