@@ -1,0 +1,43 @@
+.dropdown
+    position: relative
+    &__button
+        position: relative
+        display: flex
+        justify-content: space-between
+        background-color: #fff
+        text-align: left
+        cursor: pointer
+        font-family: "Lato", sans-serif
+        &::after
+            content: url(/src/img/vectors/user.svg)
+            height: 18px
+    &__list
+        display: none
+        position: absolute
+        left: 0
+        top: 52px
+        border: 1px solid #eee
+        background-color: #fff
+        border-radius: 10px
+        overflow: hidden
+        width: 100%
+
+        &_visible
+            display: block
+
+    &__list-item
+        margin: 0
+        padding: 0
+        border-bottom: 0px
+        padding: 13px 20px
+        cursor: pointer
+        &:hover
+            background-color: #eaf5ed
+
+.dropdown__button:focus,
+.dropdown__button_active
+    outline: none
+    box-shadow: 0px 0px 0px 4px $colorHoverFocus
+
+.dropdown__input_hidden
+    display: none

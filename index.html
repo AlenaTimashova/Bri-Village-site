@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6f5f2b0575.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Bri Village глэмпинг курорт</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="src/airDatePicker/air-datepicker.css" />
     <link rel="stylesheet" href="src/fonts/stylesheet.css" />
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
@@ -89,6 +94,59 @@
 
     <section class="book container">
       <h2 class="book__heading">Забронировать домик</h2>
+      <form class="book__form" action="#">
+        <label class="book__item"
+          >Заезд
+          <input class="book__input" type="text" id="el1" />
+        </label>
+
+        <label class="book__item"
+          >Выезд
+          <input class="book__input" type="text" id="el2" />
+        </label>
+
+        <label class="book__item" for="guests"
+          >Количество гостей
+          <div class="dropdown">
+            <button class="dropdown__button book__input">2 Взрослых</button>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item book__selectGuest" data-value="1">
+                1 ВЗРОСЛЫЙ
+              </li>
+              <li class="dropdown__list-item book__selectGuest" data-value="2">
+                2 ВЗРОСЛЫХ
+              </li>
+              <li class="dropdown__list-item book__selectGuest" data-value="3">
+                3 ВЗРОСЛЫХ
+              </li>
+              <li class="dropdown__list-item book__selectGuest" data-value="4">
+                4 ВЗРОСЛЫХ
+              </li>
+              <li class="dropdown__list-item book__selectGuest" data-value="5">
+                5 ВЗРОСЛЫХ
+              </li>
+            </ul>
+            <input
+              type="text"
+              name="select-category"
+              value="2"
+              class="dropdown__input_hidden"
+            />
+          </div>
+
+          <!-- <select class="book__input book__select" name="guests" id="guests">
+            <option class="book__selectGuest" value="1">1 Взрослый</option>
+            <option class="book__selectGuest" value="2" selected>
+              2 Взрослых
+            </option>
+            <option class="book__selectGuest" value="3">3 Взрослых</option>
+            <option class="book__selectGuest" value="4">4 Взрослых</option>
+            <option class="book__selectGuest" value="5">5 Взрослых</option>
+          </select> -->
+        </label>
+
+        <button class="button book__btn button_dark">Забронировать</button>
+      </form>
     </section>
 
     <section class="show-houses container">
@@ -379,7 +437,7 @@
         </figure>
       </div>
       <div class="offer">
-        <a href="#" class="offer__item">
+        <a href="#" class="offer__item one">
           <img
             class="offer__item-img"
             src="src/img/certificate.jpeg"
@@ -649,7 +707,223 @@
         </p>
       </form>
     </section>
+    <section class="reviews container">
+      <h2 class="reviews__heading">Отзывы наших гостей</h2>
+      <article class="review-item">
+        <div class="review-item__heading">
+          <img
+            src="src/img/review-pic.png"
+            alt="photo"
+            class="review-item__pic"
+          />
+          <div class="review-item__heading-text">
+            <p class="review-item__date">18.10.2023</p>
+            <h3 class="review-item__title">Анна Семенова</h3>
+          </div>
+        </div>
+        <p class="review-item__text">
+          Я провела незабываемый отдых в глэмпинге Bri Village! Домик был очень
+          уютным и комфортабельным, современным и со всем необходимым для
+          приятного проживания. Персонал был очень дружелюбным и готовым помочь
+          нам в любых вопросах и пожеланиях. Мы также наслаждались
+          разнообразными развлечениями, такими как рыбалка, прогулки на
+          велосипедах и барбекю. Я очень рекомендую глэмпинг Bri Village для
+          тех, кто хочет насладиться природой и комфортом. Это был незабываемый
+          отдых, и я обязательно вернусь сюда еще раз!
+        </p>
+      </article>
+      <article class="review-item">
+        <div class="review-item__heading">
+          <img
+            src="src/img/review-pic1.png"
+            alt="photo"
+            class="review-item__pic"
+          />
+          <div class="review-item__heading-text">
+            <p class="review-item__date">3.10.2023</p>
+            <h3 class="review-item__title">Сергей Рахманинов</h3>
+          </div>
+        </div>
+        <p class="review-item__text">
+          Я провела незабываемый отдых в глэмпинге Bri Village! Домик был очень
+          уютным и комфортабельным, современным и со всем необходимым для
+          приятного проживания. Персонал был очень дружелюбным и готовым помочь
+          нам в любых вопросах и пожеланиях. Мы также наслаждались
+          разнообразными развлечениями, такими как рыбалка, прогулки на
+          велосипедах и барбекю. Я очень рекомендую глэмпинг Bri Village для
+          тех, кто хочет насладиться природой и комфортом. Это был незабываемый
+          отдых, и я обязательно вернусь сюда еще раз!
+        </p>
+      </article>
+    </section>
+    <footer class="footer container">
+      <div class="footer__content">
+        <a href="index.html" class="logo">
+          <img src="src/img/logo.svg" alt="лого" />
+        </a>
+        <nav class="footer__nav">
+          <h3 class="footer__headings">Карта сайта</h3>
+          <ul class="footer__menu">
+            <li class="menu__item">
+              <a class="menu__link footer__text" href="index.html">Главная </a>
+            </li>
+            <li class="menu__item">
+              <a href="rooms.html" class="menu__link footer__text"> Номера </a>
+            </li>
+            <li class="menu__item">
+              <a href="services.html" class="menu__link footer__text"
+                >Услуги
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="about.html" class="menu__link footer__text">О нас </a>
+            </li>
+            <li class="menu__item">
+              <a href="contacts.html" class="menu__link footer__text"
+                >Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <article class="footer__contacts">
+          <h3 class="footer__headings">Администрация Bri Village</h3>
+          <div class="footer__item">
+            <h4 class="footer__item-title">
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_794_539)">
+                  <path
+                    d="M21 10.5C21 17.5 12 23.5 12 23.5C12 23.5 3 17.5 3 10.5C3 8.11305 3.94821 5.82387 5.63604 4.13604C7.32387 2.44821 9.61305 1.5 12 1.5C14.3869 1.5 16.6761 2.44821 18.364 4.13604C20.0518 5.82387 21 8.11305 21 10.5Z"
+                    stroke="#3B9254"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
+                    stroke="#3B9254"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_794_539">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(0 0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              Адрес BriVillage
+            </h4>
+            <p class="footer__text">
+              c.Бритвино, Зеленодольский район, Республика Татарстан
+            </p>
+          </div>
+          <div class="footer__item">
+            <h4 class="footer__item-title">
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4.5H20C21.1 4.5 22 5.4 22 6.5V18.5C22 19.6 21.1 20.5 20 20.5H4C2.9 20.5 2 19.6 2 18.5V6.5C2 5.4 2.9 4.5 4 4.5Z"
+                  stroke="#3B9254"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 6.5L12 13.5L2 6.5"
+                  stroke="#3B9254"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Email для связи
+            </h4>
+            <p class="footer__text">bri.village@mail.ru</p>
+          </div>
+          <div class="footer__item">
+            <h4 class="footer__item-title">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4C20 1.8 18.2 0 16 0H8C5.8 0 4 1.8 4 4V20C4 22.2 5.8 24 8 24H16C18.2 24 20 22.2 20 20V4ZM13 22H11C10.4 22 10 21.6 10 21C10 20.4 10.4 20 11 20H13C13.6 20 14 20.4 14 21C14 21.6 13.6 22 13 22ZM18 17C18 17.6 17.6 18 17 18H7C6.4 18 6 17.6 6 17V5C6 4.4 6.4 4 7 4H17C17.6 4 18 4.4 18 5V17Z"
+                  fill="#3B9254"
+                />
+              </svg>
+              Телефон для связи
+            </h4>
+            <p class="footer__text">+7 995 383 16 16</p>
+          </div>
+        </article>
+        <article class="footer__socials">
+          <h3 class="footer__headings">Социальные сети</h3>
+          <ul class="socials-menu">
+            <li class="socials-menu-item">
+              <a
+                class="socials-menu-item__link"
+                href="https://web.telegram.org/a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-telegram" style="color: #74c0fc"></i>
+                Telegram</a
+              >
+            </li>
+            <li class="socials-menu-item">
+              <a
+                class="socials-menu-item__link"
+                href="http://Whatsapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-whatsapp" style="color: #0de7a6"></i>
+                Whatsapp</a
+              >
+            </li>
+            <li class="socials-menu-item">
+              <a
+                class="socials-menu-item__link"
+                href="http://vk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-vk" style="color: #185adc"></i> VK</a
+              >
+            </li>
+          </ul>
+        </article>
+      </div>
+      <div class="footer__legal-info">
+        <p class="footer__rights">
+          &copy;&nbsp;BriVillage 2024. Все права защищены. Любое копирование
+          информации возможно только с&nbsp;согласия правообладателя ресурса.
+        </p>
+        <a class="footer__agreement" href="#">Договор оферты</a>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="src/js/swiper.js"></script>
+    <script src="src/airDatePicker/air-datepicker.js"></script>
+    <script src="src/js/datePicker.js"></script>
+    <script src="src/js/main.js"></script>
   </body>
 </html>
