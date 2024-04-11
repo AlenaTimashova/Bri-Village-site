@@ -61,11 +61,3 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     }
   });
 });
-
-// выбор акций по сезону
-
-const servicesBtns = document.querySelectorAll(".services__btn");
-
-servicesBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {});
-});

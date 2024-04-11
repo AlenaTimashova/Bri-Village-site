@@ -206,6 +206,11 @@ img {
   margin: 0 auto;
   padding: 0 10px;
 }
+@media (max-width: 900px) {
+  .container {
+    max-width: 960px;
+  }
+}
 
 .logo {
   width: 212px;
@@ -217,6 +222,10 @@ img {
 }
 .menu__link {
   padding: 0rem 0.9375rem;
+}
+.menu_column {
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .button {
@@ -249,6 +258,9 @@ img {
 .button_dark {
   background-color: #232120;
 }
+.button_mobile {
+  margin-left: 40px;
+}
 
 svg path {
   transition: fill 0.3s ease-in-out;
@@ -275,6 +287,42 @@ svg path {
 .header__phone-link:active svg path {
   fill: #2A7941;
 }
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .mobile-menu {
+    display: block;
+  }
+}
+.mobile-menu__button {
+  list-style: none;
+}
+.mobile-menu__nav {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  padding: 24px 20px;
+  width: 300px;
+}
+
+details[open] > summary > img {
+  width: 48px;
+}
 
 .hero-slider {
   margin-bottom: 80px;
@@ -299,6 +347,8 @@ svg path {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .book__item {
   font-weight: 700;
@@ -436,6 +486,10 @@ svg path {
 }
 .services__image {
   width: 30%;
+  display: none;
+}
+.services__image_visible {
+  display: block;
 }
 .services__image-desc {
   font-family: Unbounded;
@@ -446,6 +500,7 @@ svg path {
 }
 .services__btns {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -568,6 +623,7 @@ svg path {
 .advantages__card-box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -586,6 +642,8 @@ svg path {
   border-radius: 10px;
   background: linear-gradient(135deg, #24733b 0%, #429058 19.79%, #2e7b44 31.77%, #44945b 46.88%, #2e7b44 58.33%, #408f57 71.35%, #18622e 100%);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 60px;
   align-items: center;
   padding: 35px 40px;
@@ -602,6 +660,7 @@ svg path {
   line-height: 140%;
   text-align: center;
   color: #fff;
+  max-width: 40%;
 }
 
 .book-help {
@@ -713,11 +772,6 @@ svg path {
 .footer__text {
   color: #515753;
 }
-.footer__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
 .footer__item {
   margin-bottom: 30px;
   max-width: 303px;
@@ -732,6 +786,8 @@ svg path {
 }
 .footer__content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 85px;
   padding: 60px 0;
   border-bottom: 1px solid #949895;
@@ -770,4 +826,32 @@ svg path {
 
 .fa-brands {
   font-size: 25px;
+}
+
+.breadcrums {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.breadcrums__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 160%;
+  color: #425649;
+}
+.breadcrums__link:last-child {
+  font-size: 14px;
+  line-height: 160%;
+  color: #a9adaa;
+}
+.breadcrums__link:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #a9adaa;
 }/*# sourceMappingURL=style.css.map */
