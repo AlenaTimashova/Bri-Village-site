@@ -64,6 +64,10 @@ img {
   height: 520px;
   margin-bottom: 34px;
 }
+.slider-box_rooms {
+  height: 50vh;
+  margin-bottom: 40px;
+}
 
 .swiper-container {
   background-color: #C9DACE;
@@ -834,6 +838,10 @@ details[open] > summary > img {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+.breadcrums_about {
+  display: flex;
+  justify-content: center;
+}
 .breadcrums__link {
   display: flex;
   align-items: center;
@@ -854,4 +862,121 @@ details[open] > summary > img {
   height: 4px;
   border-radius: 50%;
   background-color: #a9adaa;
+}
+.breadcrums__link_about-page {
+  color: #fff;
+  font-size: 15px;
+}
+
+.rooms {
+  margin-bottom: 80px;
+}
+.rooms__heading {
+  margin-bottom: 40px;
+}
+.rooms__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.rooms__tile {
+  border-radius: 40px;
+  padding: 10px 20px;
+  background: #eaf5ed;
+  font-size: 16px;
+}
+.rooms__description {
+  color: #515753;
+  max-width: 70%;
+}
+
+.facilities {
+  margin-bottom: 80px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  padding: 60px;
+}
+.facilities__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.facilities__item-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  gap: 30px;
+}
+.facilities__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #425649;
+}
+
+.information {
+  margin-bottom: 80px;
+  display: flex;
+  gap: 20px;
+}
+.information__contents {
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+}
+.information__contents-heading {
+  font-family: Unbounded;
+  margin-bottom: 15px;
+}
+.information__tiles-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.information__tile {
+  border-radius: 30px;
+  padding: 5px 16px;
+  background-color: #eee;
+}
+.information__tile_big {
+  border-radius: 10px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+.information__tile-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 30px 0 30px;
+}
+.information__tile-item:not(:last-child) {
+  border-right: 1px solid #e1e6ea;
+}
+
+.about-page__hero {
+  background-image: url(/src/img/about_hero.png);
+  padding: 50px 265px 115px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.about-page__heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Unbounded";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140%;
 }/*# sourceMappingURL=style.css.map */

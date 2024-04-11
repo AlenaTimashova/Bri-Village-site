@@ -2,13 +2,6 @@
 @import 'slider'
 @import 'dropdown'
 
-@mixin section-heading
-    color: $colorMain_dark
-    font-family: Unbounded
-    font-size: 36px
-    font-style: normal
-    font-weight: 400
-    line-height: 140%
 *
     padding: 0
     margin: 0
@@ -517,6 +510,9 @@ details[open] > summary > img
     gap: 10px
     margin-bottom: 30px
     margin-top: 30px
+    &_about
+        display: flex
+        justify-content: center
     &__link
         display: flex
         align-items: center
@@ -535,3 +531,92 @@ details[open] > summary > img
             height: 4px
             border-radius: 50%
             background-color: #a9adaa
+        &_about-page
+            color: #fff
+            font-size: 15px
+    // rooms page
+
+.rooms
+    margin-bottom: $sectionGap
+    &__heading
+        margin-bottom: 40px
+    &__tiles
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 30px
+    &__tile
+        border-radius: 40px
+        padding: 10px 20px
+        background: #eaf5ed
+        font-size: 16px
+    &__description
+        color: $colorFooterText
+        max-width: 70%
+
+.facilities
+    margin-bottom: $sectionGap
+    border-radius: 10px
+    background-color: #f8f8f8
+    padding: 60px
+    &__heading
+        @include section-heading
+        font-size: 20px
+        margin-bottom: 40px
+    &__item-box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 20px
+        gap: 30px
+    &__item
+        display: flex
+        align-items: center
+        gap: 10px
+        color: #425649
+
+.information
+    margin-bottom: $sectionGap
+    display: flex
+    gap: 20px
+    &__contents
+        background: #f8f8f8
+        padding: 40px
+        border-radius: 10px
+    &__contents-heading
+        font-family: Unbounded
+        margin-bottom: 15px
+    &__tiles-box
+        display: flex
+        gap: 10px
+        margin-bottom: 40px
+    &__tile
+        border-radius: 30px
+        padding: 5px 16px
+        background-color: #eee
+        &_big
+            border-radius: 10px
+            padding: 20px 30px
+            display: flex
+            align-items: center
+    &__tile-item
+        display: flex
+        align-items: center
+        flex-direction: column
+        gap: 10px
+        padding: 0 30px 0 30px
+        &:not(:last-child)
+            border-right: 1px solid #e1e6ea
+
+    // about page
+
+.about-page
+    &__hero
+        background-image: url(/src/img/about_hero.png)
+        padding: 50px 265px 115px
+        margin-bottom: 50px
+        border-radius: $border-radius_main
+    &__heading
+        @include main-header
+        font-weight: 400
+        font-size: 36px
+        line-height: 140%

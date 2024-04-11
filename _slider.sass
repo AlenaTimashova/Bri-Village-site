@@ -29,13 +29,7 @@ img
         padding: 15rem 15rem 10rem 15rem
         pointer-events: none
     &__header
-        color: $colorMain_light
-        text-align: center
-        font-family: 'Unbounded'
-        font-size: 3.5rem
-        font-style: normal
-        font-weight: 600
-        line-height: 110%
+        @include main-header
     &__subtitle
         color: $colorMain_light
         text-align: center
@@ -56,7 +50,9 @@ img
     &_rent
         height: 520px
         margin-bottom: 34px
-
+    &_rooms
+        height: 50vh
+        margin-bottom: 40px
     // сам слайдер
 
 .swiper-container
