@@ -36,6 +36,9 @@ img
     max-width: $DesktopWidthSite
     margin: 0 auto
     padding: 0 10px
+    &_slider-box
+        padding-top: 60px
+        position: relative
     @media ( max-width: 900px )
         max-width: 960px
 
@@ -298,6 +301,7 @@ details[open] > summary > img
 
 .infrastructure
     margin-bottom: $sectionGap
+
     &__cards-box
         display: flex
         gap: 10px
@@ -427,9 +431,9 @@ details[open] > summary > img
 
 .review-item
     border-radius: 10px
-    width: 580px
-    height: 430px
+
     background-color: #fff
+    padding: 40px 30px
     &__heading
         display: flex
         gap: 20px
@@ -447,6 +451,8 @@ details[open] > summary > img
 
 .footer
     margin-bottom: 40px
+    &_colored
+        background-color: $footerPageColor
     &__headings
         font-weight: 700
         font-size: 15px
@@ -534,6 +540,9 @@ details[open] > summary > img
         &_about-page
             color: #fff
             font-size: 15px
+
+.houses
+    margin-bottom: $sectionGap
     // rooms page
 
 .rooms
