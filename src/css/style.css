@@ -68,6 +68,10 @@ img {
   height: 50vh;
   margin-bottom: 40px;
 }
+.slider-box_about {
+  height: 600px;
+  margin-bottom: 10px;
+}
 
 .swiper-container {
   background-color: #C9DACE;
@@ -113,6 +117,10 @@ img {
 }
 .swiper-button-prev:after {
   content: url(/src/img/silderBtnLeft.svg);
+}
+
+.swiper-house {
+  width: 380px;
 }
 
 .dropdown {
@@ -979,4 +987,59 @@ details[open] > summary > img {
   font-weight: 400;
   font-size: 36px;
   line-height: 140%;
+}
+.about-page__section {
+  margin-bottom: 50px;
+}
+.about-page__picture {
+  margin-bottom: 50px;
+}
+.about-page__img {
+  border-radius: 10px;
+}
+.about-page__description {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 150%;
+  color: #949895;
+  margin-bottom: 50px;
+}
+.about-page__description_swiper {
+  margin-bottom: 50px;
+}
+.about-page__text-link {
+  line-height: 150%;
+  text-decoration: underline;
+  color: #3B9254;
+}
+.about-page__section-title {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.about-page__video {
+  border-radius: 10px;
+  width: 100%;
+}
+.about-page__video-box {
+  position: relative;
+}
+.about-page__video-box img {
+  width: 56px;
+  position: absolute;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
+}
+.about-page__video-box_small {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.video-btn {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

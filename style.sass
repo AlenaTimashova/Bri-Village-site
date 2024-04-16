@@ -620,3 +620,41 @@ details[open] > summary > img
         font-weight: 400
         font-size: 36px
         line-height: 140%
+    &__section
+        margin-bottom: 50px
+    &__picture
+        margin-bottom: 50px
+    &__img
+        border-radius: 10px
+    &__description
+        font-style: italic
+        font-size: 15px
+        line-height: 150%
+        color: #949895
+        margin-bottom: 50px
+        &_swiper
+            margin-bottom: 50px
+    &__text-link
+        line-height: 150%
+        text-decoration: underline
+        color: $colorHero
+    &__section-title
+        @include section-heading
+        font-size: 28px
+        margin-bottom: 20px
+    &__video
+        border-radius: 10px
+        width: 100%
+    &__video-box
+        position: relative
+        & img
+            width: 56px
+            position: absolute
+            top: calc( 50% - 28px )
+            left: calc( 50% - 28px )
+        &_small
+            width: 500px
+            margin: 0 auto
+
+.video-btn
+    cursor: pointer
