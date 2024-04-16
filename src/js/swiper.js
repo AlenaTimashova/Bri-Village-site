@@ -78,3 +78,17 @@ const housesSwiper = new Swiper(".mySwiper_houses", {
     prevEl: ".swiper-button-prev_houses",
   },
 });
+
+const contactsSwiper = new Swiper(".mySwiper_contacts", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  a11y: {
+    paginationBulletMessage: "Тут название слайда {{index}}",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next_contacts",
+    prevEl: ".swiper-button-prev_contacts",
+  },
+});

@@ -305,9 +305,7 @@ details[open] > summary > img
     &__cards-box
         display: flex
         gap: 10px
-    &__heading
-        @include section-heading
-        margin-bottom: 40px
+
     &__card
         position: relative
         width: 280px //убрать потом в слайд
@@ -667,3 +665,49 @@ details[open] > summary > img
 
 .video-btn
     cursor: pointer
+
+    // contacts page
+
+.contacts
+    margin-bottom: $sectionGap
+    &__heading
+        @include section-heading
+        margin-bottom: 40px
+    &__info-box
+        display: flex
+        gap: 20px
+
+    &__info
+        padding: 30px
+        background-color: $colorHero
+        background-image: url(/src/img/contacts_background.png)
+        border-radius: $border-radius_main
+
+    &__info-img
+        margin-bottom: 30px
+    &__list
+        margin-bottom: 30px
+    &__list-item
+        color: #fff
+        margin-bottom: 15px
+        &_big
+            @include section-heading
+            font-size: 28px
+            color: #fff
+    &__socials
+        display: flex
+        gap: 10px
+        font-size: 30px
+    &__socials-item
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 10px
+        padding: 12px 30px
+        width: 48px
+        height: 48px
+        background-color: #fff
+    &__gallery
+        margin-bottom: $sectionGap
+.map
+    border-radius: $border-radius_main
