@@ -12,7 +12,12 @@ body
     font-family: 'Lato', sans-serif
     font-weight: 400
     font-size: 18px
-
+    @media ( max-width: 1024px )
+        font-size: 16px
+    @media ( max-width: 768px )
+        font-size: 14px
+    @media ( max-width: 425px )
+        font-size: 12px
 a
     text-decoration: none
     color: $colorMain_dark
@@ -39,17 +44,22 @@ img
     &_slider-box
         padding-top: 60px
         position: relative
-    @media ( max-width: 900px )
-        max-width: 960px
-
+        margin-bottom: 30px
+    @media ( max-width: 1024px )
+        max-width: 1000px
+    @media ( max-width: 768px )
+        max-width: 760px
+    @media ( max-width: 425px )
+        max-width: 370px
 .logo
     width: 212px
 
 .menu
     display: flex
-    gap: 0.625rem
-    &__link
-        padding: 0rem 0.9375rem
+
+    &__item
+        padding: 0 7px
+
     &_column
         flex-direction: column
         margin-bottom: 40px
@@ -87,7 +97,9 @@ svg path
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 1rem 0
+    padding-top: 1rem
+    padding-bottom: 1rem
+
     &__phone-link
         display: flex
         height: 3.5rem
@@ -103,12 +115,12 @@ svg path
     &__nav
         display: flex
         align-items: center
-        @media (max-width: 1000px)
+        @media ( max-width: 1024px )
             display: none
 .mobile-menu
     display: none
     position: relative
-    @media (max-width: 1000px)
+    @media ( max-width: 1024px )
         display: block
 
     &__button
@@ -203,6 +215,9 @@ details[open] > summary > img
     &__info
         display: flex
         justify-content: space-between
+        @media ( max-width: 425px)
+            flex-wrap: wrap
+            justify-content: center
     &__content
         width: 73%
     &__price
@@ -219,9 +234,7 @@ details[open] > summary > img
         background-color: $colorMain_light
         padding: 4px 14px
     &__desc
-        font-size: 18px
-        font-style: normal
-        font-weight: 400
+
         line-height: 150%
     &__btn
         align-self: center
@@ -248,6 +261,8 @@ details[open] > summary > img
     &__image
         width: 30%
         display: none
+        @media ( max-width: 768px )
+            width: 100%
         &_visible
             display: block
     &__image-desc
@@ -273,6 +288,8 @@ details[open] > summary > img
     grid-template-columns: repeat(8, 1fr)
     gap: 20px
     @media ( max-width: 768px )
+        display: flex
+        flex-direction: column
 
     &__item
         padding: 30px
@@ -289,6 +306,7 @@ details[open] > summary > img
             grid-column: span 4
         &:nth-child(5)
             grid-column: span 2
+
     &__item-img
         width: 40px
         color: $colorMain_dark
@@ -298,6 +316,8 @@ details[open] > summary > img
         font-family: Unbounded
         font-size: 16px
         font-weight: 500
+        @media ( max-width: 768px )
+            font-size: 14px
 
 .infrastructure
     margin-bottom: $sectionGap
@@ -327,6 +347,9 @@ details[open] > summary > img
     margin-bottom: $sectionGap
     display: flex
     justify-content: space-between
+    @media ( max-width: 768px )
+        flex-direction: column-reverse
+        align-items: center
     &__content
         max-width: 47%
     &__heading
@@ -339,6 +362,8 @@ details[open] > summary > img
 
     &__slider
         width: 47%
+        @media ( max-width: 768px )
+            width: 100%
 
 .advantages
     margin-bottom: $sectionGap
@@ -366,22 +391,25 @@ details[open] > summary > img
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    gap: 60px
     align-items: center
     padding: 35px 40px
     margin-bottom: $sectionGap
-
+    @media ( max-width: 1024px )
+        padding: 20px
+    @media ( max-width: 768px )
+        flex-direction: column
+        gap: 30px
     &__img
         border-radius: 10px
         width: 210px
     &__heading
-        font-family: "Unbounded", sans-serif
-        font-weight: 400
+        @include section-heading
         font-size: 28px
-        line-height: 140%
         text-align: center
         color: #fff
         max-width: 40%
+        @media ( max-width: 425px )
+            font-size: 18px
 
 .book-help
     margin-bottom: $sectionGap
@@ -399,8 +427,11 @@ details[open] > summary > img
     &__form
         display: grid
         grid-template-columns: repeat(2, 1fr)
-        width: 665px
+        max-width: 327px
         gap: 20px
+        @media ( max-width: 768px )
+            grid-template-columns: repeat(1, 1fr)
+
     &__form-input
         border: 1px solid #eee
         border-radius: 10px
@@ -423,19 +454,28 @@ details[open] > summary > img
 
 .reviews
     margin-bottom: $sectionGap
+    height: 100%
     &__heading
         @include section-heading
         margin-bottom: 40px
 
 .review-item
     border-radius: 10px
-
     background-color: #fff
     padding: 40px 30px
+
+    @media ( max-width: 1024px )
+        padding: 20px 15px
+
     &__heading
         display: flex
-        gap: 20px
+        justify-content: space-between
+        flex-wrap: wrap
         margin-bottom: 30px
+        @media ( max-width: 1024px )
+            margin-bottom: 20px
+        @media ( max-width: 425px )
+            display: block
     &__pic
         border-radius: 10px
         width: 60px
@@ -448,7 +488,7 @@ details[open] > summary > img
         color: #515753
 
 .footer
-    margin-bottom: 40px
+    padding-bottom: 40px
     &_colored
         background-color: $footerPageColor
     &__headings
@@ -575,25 +615,38 @@ details[open] > summary > img
         grid-template-columns: repeat(4, 1fr)
         column-gap: 20px
         gap: 30px
+        @media ( max-width: 768px )
+            grid-template-columns: repeat(1, 1fr)
     &__item
         display: flex
         align-items: center
+        flex-wrap: wrap
         gap: 10px
         color: #425649
 
 .information
     margin-bottom: $sectionGap
     display: flex
+    flex-wrap: wrap
+    justify-content: center
     gap: 20px
+    @media ( max-width: 1024px )
+
     &__contents
         background: #f8f8f8
         padding: 40px
         border-radius: 10px
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        align-items: column
     &__contents-heading
         font-family: Unbounded
         margin-bottom: 15px
     &__tiles-box
         display: flex
+        flex-wrap: wrap
+        justify-content: center
         gap: 10px
         margin-bottom: 40px
     &__tile
@@ -605,9 +658,12 @@ details[open] > summary > img
             padding: 20px 30px
             display: flex
             align-items: center
+            @media ( max-width: 768px )
+                flex-direction: column
     &__tile-item
         display: flex
         align-items: center
+        flex-wrap: wrap
         flex-direction: column
         gap: 10px
         padding: 0 30px 0 30px

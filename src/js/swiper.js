@@ -29,6 +29,20 @@ const infrastructureSwiper = new Swiper(".mySwiper", {
   a11y: {
     paginationBulletMessage: "Тут название слайда {{index}}",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -52,10 +66,25 @@ const reviewsSwiper = new Swiper(".mySwiper_reviews", {
 });
 
 const servicesSwiper = new Swiper(".mySwiper_services", {
-  slidesPerView: 3,
-  spaceBetween: 20,
+  // slidesPerView: 3,
+  // spaceBetween: 20,
   a11y: {
     paginationBulletMessage: "Тут название слайда {{index}}",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
   },
 
   // Navigation arrows
@@ -72,6 +101,17 @@ const housesSwiper = new Swiper(".mySwiper_houses", {
     paginationBulletMessage: "Тут название слайда {{index}}",
   },
 
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next_houses",
@@ -84,6 +124,21 @@ const contactsSwiper = new Swiper(".mySwiper_contacts", {
   spaceBetween: 20,
   a11y: {
     paginationBulletMessage: "Тут название слайда {{index}}",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
   },
 
   // Navigation arrows

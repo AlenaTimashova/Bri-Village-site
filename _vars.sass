@@ -19,7 +19,12 @@ $footerPageColor: #f8f8f8
     font-style: normal
     font-weight: 400
     line-height: 140%
-
+    @media ( max-width: 1024px )
+        font-size: 30px
+    @media ( max-width: 768px )
+        font-size: 26px
+    @media ( max-width: 425px )
+        font-size: 20px
 @mixin main-header
     color: $colorMain_light
     text-align: center
@@ -28,3 +33,9 @@ $footerPageColor: #f8f8f8
     font-style: normal
     font-weight: 600
     line-height: 110%
+    @media ( max-width: 1024px )
+        font-size: 3rem
+    @media ( max-width: 768px )
+        font-size: 2rem
+    @media ( max-width: 425px )
+        font-size: 1rem

@@ -14,8 +14,14 @@
         display: flex
         flex-direction: column
         align-items: center
-        padding: 15rem 15rem 10rem 15rem
+        padding: 15rem 15rem
         pointer-events: none
+        @media ( max-width: 768px  )
+            padding: 10rem 5rem
+            top: 10px
+        @media ( max-width: 425px  )
+            padding: 5rem 2.5rem
+            top: 0
     &__header
         @include main-header
     &__subtitle
@@ -35,7 +41,8 @@
         &::after
             content: url(/src/img/calendar_icon.svg)
             font-size: 28px
-
+        @media ( max-width: 425px  )
+            width: 293px
     &_rent
         height: 520px
         margin-bottom: 34px
@@ -84,6 +91,8 @@
     right: 15px
     display: flex
     gap: 10px
+    @media ( max-width: 768px  )
+        display: none
 
 .swiper-button-next
     right: 2rem
@@ -91,19 +100,28 @@
         content: url(/src/img/silderBtnRight.svg)
     &_top::after
         content: ""
-
+    @media ( max-width: 768px  )
+        display: none
 .swiper-button-prev
     left: 2rem
     &::after
         content: url(/src/img/silderBtnLeft.svg)
     &_top::after
         content: ""
+    @media ( max-width: 768px  )
+        display: none
+
 .swiper_top-btn
     position: unset
     cursor: pointer
     width: 56px
 
-.swiper-background
-    background-image: url(/src/img/infrastructure_background.png)
-    background-color: #eaf5ed
-    height: 560px
+.swiper
+    &-background
+        background-image: url(/src/img/infrastructure_background.png)
+        background-color: #eaf5ed
+        height: 560px
+
+    &-slide_section
+        @media ( max-width: 768px  )
+            flex-shrink: initial
