@@ -17,7 +17,7 @@ body
     @media ( max-width: 768px )
         font-size: 14px
     @media ( max-width: 425px )
-        font-size: 12px
+        font-size: 15px
 a
     text-decoration: none
     color: $colorMain_dark
@@ -117,12 +117,16 @@ svg path
         align-items: center
         @media ( max-width: 1024px )
             display: none
+
 .mobile-menu
     display: none
     position: relative
     @media ( max-width: 1024px )
         display: block
-
+    &__heading
+        @include section-heading
+        font-size: 28px
+        margin-bottom: 30px
     &__button
         list-style: none
 
@@ -203,6 +207,8 @@ details[open] > summary > img
             grid-row: span 2
         &:nth-child(4), &:nth-child(5)
             grid-column: span 2
+    @media ( max-width: 768px )
+        display: none
 
 .rent
     border-radius: 10px
@@ -276,6 +282,9 @@ details[open] > summary > img
         flex-wrap: wrap
         gap: 10px
         margin-bottom: 30px
+        @media ( max-width: 425px )
+            display: none
+
     &__btn
         background-color: #EAF5ED
         color: $colorClick
@@ -359,7 +368,8 @@ details[open] > summary > img
         margin-bottom: 30px
     &__btn
         display: inline-block
-
+        @media ( max-width: 768px )
+            width: 224px
     &__slider
         width: 47%
         @media ( max-width: 768px )
@@ -405,6 +415,8 @@ details[open] > summary > img
     &__heading
         @include section-heading
         font-size: 28px
+        display: flex
+        justify-content: center
         text-align: center
         color: #fff
         max-width: 40%
@@ -436,11 +448,12 @@ details[open] > summary > img
         border: 1px solid #eee
         border-radius: 10px
         padding: 14px 15px
-        width: 327px
+        min-width: 282px
         color: #949895
         font-family: 'Lato', sans-serif
         font-weight: 400
         font-size: 18px
+
     &__text
         font-style: italic
         font-size: 15px
@@ -515,18 +528,32 @@ details[open] > summary > img
     &__content
         display: flex
         flex-wrap: wrap
-        justify-content: center
-        gap: 85px
+        justify-content: space-between
         padding: 60px 0
         border-bottom: 1px solid #949895
         margin-bottom: 40px
+        @media ( max-width: 425px )
+            flex-direction: column
     &__legal-info
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
+        gap: 30px
+        @media ( max-width: 425px )
+            flex-direction: column-reverse
+            gap: 30px
     &__rights
         width: 52%
         color: $colorFooterText
-        margin-right: 118px
+        @media ( max-width: 425px )
+            width: 100%
+    &__legal-links
+        display: flex
+        flex-wrap: wrap
+        @media ( max-width: 425px )
+
+            flex-direction: column
+            gap: 10px
     &__agreement
         color: $colorFooterText
     &__policy
@@ -536,7 +563,8 @@ details[open] > summary > img
             border: 1px solid #949895
             width: 27px
             margin-right: 10px
-
+            @media ( max-width: 425px )
+                display: none
 .socials-menu-item
     margin-bottom: 20px
     &__link
@@ -555,7 +583,6 @@ details[open] > summary > img
     margin-bottom: 30px
     margin-top: 30px
     &_about
-        display: flex
         justify-content: center
     &__link
         display: flex
@@ -581,6 +608,11 @@ details[open] > summary > img
 
 .houses
     margin-bottom: $sectionGap
+    &_index
+        display: none
+        @media ( max-width: 768px )
+            display: block
+
     // rooms page
 
 .rooms
@@ -600,6 +632,8 @@ details[open] > summary > img
     &__description
         color: $colorFooterText
         max-width: 70%
+        @media ( max-width: 425px )
+            width: 100%
 
 .facilities
     margin-bottom: $sectionGap
@@ -627,11 +661,10 @@ details[open] > summary > img
 .information
     margin-bottom: $sectionGap
     display: flex
-    flex-wrap: wrap
     justify-content: center
     gap: 20px
     @media ( max-width: 1024px )
-
+        flex-direction: column
     &__contents
         background: #f8f8f8
         padding: 40px
@@ -675,9 +708,17 @@ details[open] > summary > img
 .about-page
     &__hero
         background-image: url(/src/img/about_hero.png)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
         padding: 50px 265px 115px
         margin-bottom: 50px
         border-radius: $border-radius_main
+        @media ( max-width: 768px )
+            padding: 25px 130px 60px
+        @media ( max-width: 768px )
+            padding-left: 88px
+            padding-right: 88px
     &__heading
         @include main-header
         font-weight: 400
@@ -707,7 +748,8 @@ details[open] > summary > img
         margin-bottom: 20px
     &__video
         border-radius: 10px
-        width: 100%
+        &_large
+            width: 100%
     &__video-box
         position: relative
         & img
@@ -716,8 +758,9 @@ details[open] > summary > img
             top: calc( 50% - 28px )
             left: calc( 50% - 28px )
         &_small
-            width: 500px
-            margin: 0 auto
+            display: flex
+            flex-direction: column
+            align-items: center
 
 .video-btn
     cursor: pointer
@@ -732,13 +775,13 @@ details[open] > summary > img
     &__info-box
         display: flex
         gap: 20px
-
+        @media ( max-width: 768px )
+            flex-direction: column
     &__info
         padding: 30px
         background-color: $colorHero
         background-image: url(/src/img/contacts_background.png)
         border-radius: $border-radius_main
-
     &__info-img
         margin-bottom: 30px
     &__list
@@ -767,3 +810,4 @@ details[open] > summary > img
         margin-bottom: $sectionGap
 .map
     border-radius: $border-radius_main
+    width: 100%

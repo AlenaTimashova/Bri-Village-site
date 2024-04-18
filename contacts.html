@@ -38,25 +38,72 @@
             <a href="contacts.html" class="menu__link">Контакты </a>
           </li>
         </ul>
-      </nav>
-      <p class="header__phone">
-        <a class="header__phone-link" href="+79953831616">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <p class="header__phone">
+          <a class="header__phone-link" href="+79953831616">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 4C20 1.8 18.2 0 16 0H8C5.8 0 4 1.8 4 4V20C4 22.2 5.8 24 8 24H16C18.2 24 20 22.2 20 20V4ZM13 22H11C10.4 22 10 21.6 10 21C10 20.4 10.4 20 11 20H13C13.6 20 14 20.4 14 21C14 21.6 13.6 22 13 22ZM18 17C18 17.6 17.6 18 17 18H7C6.4 18 6 17.6 6 17V5C6 4.4 6.4 4 7 4H17C17.6 4 18 4.4 18 5V17Z"
+                fill="#1A3A27"
+              />
+            </svg>
+            +7 995 383 16 16</a
           >
-            <path
-              d="M20 4C20 1.8 18.2 0 16 0H8C5.8 0 4 1.8 4 4V20C4 22.2 5.8 24 8 24H16C18.2 24 20 22.2 20 20V4ZM13 22H11C10.4 22 10 21.6 10 21C10 20.4 10.4 20 11 20H13C13.6 20 14 20.4 14 21C14 21.6 13.6 22 13 22ZM18 17C18 17.6 17.6 18 17 18H7C6.4 18 6 17.6 6 17V5C6 4.4 6.4 4 7 4H17C17.6 4 18 4.4 18 5V17Z"
-              fill="#1A3A27"
-            />
-          </svg>
-          +7 995 383 16 16</a
-        >
-      </p>
-      <button class="button">Забронировать</button>
+        </p>
+        <button class="button">Забронировать</button>
+      </nav>
+
+      <!-- mobile-menu -->
+
+      <details class="mobile-menu">
+        <summary class="mobile-menu__button">
+          <img src="src/img/vectors/menu_btn.svg" alt="menu-button" />
+        </summary>
+
+        <nav class="mobile-menu__nav">
+          <h2 class="mobile-menu__heading">Меню</h2>
+          <ul class="menu menu_column">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная </a>
+            </li>
+            <li class="menu__item">
+              <a href="rooms.html" class="menu__link"> Номера </a>
+            </li>
+            <li class="menu__item">
+              <a href="services.html" class="menu__link">Услуги </a>
+            </li>
+            <li class="menu__item">
+              <a href="about.html" class="menu__link">О нас </a>
+            </li>
+            <li class="menu__item">
+              <a href="contacts.html" class="menu__link">Контакты </a>
+            </li>
+          </ul>
+          <p class="header__phone">
+            <a class="header__phone-link" href="+79953831616">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4C20 1.8 18.2 0 16 0H8C5.8 0 4 1.8 4 4V20C4 22.2 5.8 24 8 24H16C18.2 24 20 22.2 20 20V4ZM13 22H11C10.4 22 10 21.6 10 21C10 20.4 10.4 20 11 20H13C13.6 20 14 20.4 14 21C14 21.6 13.6 22 13 22ZM18 17C18 17.6 17.6 18 17 18H7C6.4 18 6 17.6 6 17V5C6 4.4 6.4 4 7 4H17C17.6 4 18 4.4 18 5V17Z"
+                  fill="#1A3A27"
+                />
+              </svg>
+              +7 995 383 16 16</a
+            >
+          </p>
+          <button class="button button_mobile">Забронировать</button>
+        </nav>
+      </details>
     </header>
     <section class="breadcrums container">
       <a href="index.html" class="breadcrums__link">Главная</a>
@@ -615,8 +662,14 @@
             &copy;&nbsp;BriVillage 2024. Все права защищены. Любое копирование
             информации возможно только с&nbsp;согласия правообладателя ресурса.
           </p>
-          <a class="footer__agreement" href="#">Договор оферты</a>
-          <a class="footer__policy" href="#">Политика конфиденциальности</a>
+          <div class="footer__legal-links">
+            <a class="footer__agreement" target="_blank" href="#"
+              >Договор оферты</a
+            >
+            <a class="footer__policy" target="_blank" href="#"
+              >Политика конфиденциальности</a
+            >
+          </div>
         </div>
       </div>
     </footer>

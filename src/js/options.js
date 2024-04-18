@@ -1,6 +1,6 @@
 // выбор акций по сезону
 
-const servicesBtns = document.querySelectorAll(".services__btn");
+const servicesBtns = document.querySelectorAll(".services__options");
 const options = document.querySelectorAll(".services__image");
 
 servicesBtns.forEach((btn) => {

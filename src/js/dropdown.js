@@ -1,5 +1,3 @@
-// Дропдаун
-
 // Полифилл для метода forEach для NodeList
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = function (callback, thisArg) {
@@ -9,10 +7,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     }
   };
 }
-
-document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-});
 
 document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector(".dropdown__button");

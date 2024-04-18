@@ -110,7 +110,7 @@
 }
 @media (max-width: 425px) {
   .slider__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -218,6 +218,29 @@
   content: url(/src/img/vectors/user.svg);
   height: 18px;
 }
+.dropdown__button_seasons {
+  display: none;
+  margin-bottom: 20px;
+}
+.dropdown__button_seasons::after {
+  content: "";
+  position: absolute;
+  top: 32%;
+  right: 15px;
+  transform: rotate(-45deg);
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+}
+@media (max-width: 425px) {
+  .dropdown__button_seasons {
+    display: block;
+    width: 100%;
+  }
+}
 .dropdown__list {
   display: none;
   position: absolute;
@@ -277,7 +300,7 @@ body {
 }
 @media (max-width: 425px) {
   body {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
@@ -427,6 +450,31 @@ svg path {
     display: block;
   }
 }
+.mobile-menu__heading {
+  color: #1A3A27;
+  font-family: Unbounded;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .mobile-menu__heading {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-menu__heading {
+    font-size: 26px;
+  }
+}
+@media (max-width: 425px) {
+  .mobile-menu__heading {
+    font-size: 18px;
+  }
+}
 .mobile-menu__button {
   list-style: none;
 }
@@ -525,7 +573,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .show-houses__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .show-houses__pics {
@@ -540,6 +588,11 @@ details[open] > summary > img {
 }
 .show-houses__pic:nth-child(4), .show-houses__pic:nth-child(5) {
   grid-column: span 2;
+}
+@media (max-width: 768px) {
+  .show-houses {
+    display: none;
+  }
 }
 
 .rent {
@@ -569,7 +622,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .rent__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .rent__info {
@@ -643,7 +696,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .servicesOffers__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -677,6 +730,11 @@ details[open] > summary > img {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
+}
+@media (max-width: 425px) {
+  .services__btns {
+    display: none;
+  }
 }
 .services__btn {
   background-color: #EAF5ED;
@@ -798,7 +856,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .about__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .about__text {
@@ -806,6 +864,11 @@ details[open] > summary > img {
 }
 .about__btn {
   display: inline-block;
+}
+@media (max-width: 768px) {
+  .about__btn {
+    width: 224px;
+  }
 }
 .about__slider {
   width: 47%;
@@ -873,6 +936,8 @@ details[open] > summary > img {
   font-weight: 400;
   line-height: 140%;
   font-size: 28px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: #fff;
   max-width: 40%;
@@ -889,7 +954,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .help__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 425px) {
@@ -930,7 +995,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .book-help__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .book-help__form {
@@ -948,7 +1013,7 @@ details[open] > summary > img {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 14px 15px;
-  width: 327px;
+  min-width: 282px;
   color: #949895;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -993,7 +1058,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .reviews__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1051,7 +1116,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .review-item__title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .review-item__text {
@@ -1091,20 +1156,46 @@ details[open] > summary > img {
 .footer__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 85px;
+  justify-content: space-between;
   padding: 60px 0;
   border-bottom: 1px solid #949895;
   margin-bottom: 40px;
 }
+@media (max-width: 425px) {
+  .footer__content {
+    flex-direction: column;
+  }
+}
 .footer__legal-info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 425px) {
+  .footer__legal-info {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
 }
 .footer__rights {
   width: 52%;
   color: #515753;
-  margin-right: 118px;
+}
+@media (max-width: 425px) {
+  .footer__rights {
+    width: 100%;
+  }
+}
+.footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 425px) {
+  .footer__legal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .footer__agreement {
   color: #515753;
@@ -1117,6 +1208,11 @@ details[open] > summary > img {
   border: 1px solid #949895;
   width: 27px;
   margin-right: 10px;
+}
+@media (max-width: 425px) {
+  .footer__policy::before {
+    display: none;
+  }
 }
 
 .socials-menu-item {
@@ -1139,7 +1235,6 @@ details[open] > summary > img {
   margin-top: 30px;
 }
 .breadcrums_about {
-  display: flex;
   justify-content: center;
 }
 .breadcrums__link {
@@ -1171,6 +1266,14 @@ details[open] > summary > img {
 .houses {
   margin-bottom: 80px;
 }
+.houses_index {
+  display: none;
+}
+@media (max-width: 768px) {
+  .houses_index {
+    display: block;
+  }
+}
 
 .rooms {
   margin-bottom: 80px;
@@ -1193,6 +1296,11 @@ details[open] > summary > img {
 .rooms__description {
   color: #515753;
   max-width: 70%;
+}
+@media (max-width: 425px) {
+  .rooms__description {
+    width: 100%;
+  }
 }
 
 .facilities {
@@ -1223,7 +1331,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .facilities__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .facilities__item-box {
@@ -1249,9 +1357,13 @@ details[open] > summary > img {
 .information {
   margin-bottom: 80px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  .information {
+    flex-direction: column;
+  }
 }
 .information__contents {
   background: #f8f8f8;
@@ -1303,9 +1415,23 @@ details[open] > summary > img {
 
 .about-page__hero {
   background-image: url(/src/img/about_hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 50px 265px 115px;
   margin-bottom: 50px;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .about-page__hero {
+    padding: 25px 130px 60px;
+  }
+}
+@media (max-width: 768px) {
+  .about-page__hero {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
 }
 .about-page__heading {
   color: #fff;
@@ -1380,11 +1506,13 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .about-page__section-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .about-page__video {
   border-radius: 10px;
+}
+.about-page__video_large {
   width: 100%;
 }
 .about-page__video-box {
@@ -1397,8 +1525,9 @@ details[open] > summary > img {
   left: calc(50% - 28px);
 }
 .about-page__video-box_small {
-  width: 500px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .video-btn {
@@ -1429,12 +1558,17 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .contacts__heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .contacts__info-box {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .contacts__info-box {
+    flex-direction: column;
+  }
 }
 .contacts__info {
   padding: 30px;
@@ -1474,7 +1608,7 @@ details[open] > summary > img {
 }
 @media (max-width: 425px) {
   .contacts__list-item_big {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .contacts__socials {
@@ -1498,4 +1632,5 @@ details[open] > summary > img {
 
 .map {
   border-radius: 10px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

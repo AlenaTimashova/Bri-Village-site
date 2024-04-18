@@ -67,6 +67,7 @@
         </summary>
 
         <nav class="mobile-menu__nav">
+          <h2 class="mobile-menu__heading">Меню</h2>
           <ul class="menu menu_column">
             <li class="menu__item">
               <a class="menu__link" href="index.html">Главная </a>
@@ -183,23 +184,106 @@
               class="dropdown__input_hidden"
             />
           </div>
-
-          <!-- <select class="book__input book__select" name="guests" id="guests">
-            <option class="book__selectGuest" value="1">1 Взрослый</option>
-            <option class="book__selectGuest" value="2" selected>
-              2 Взрослых
-            </option>
-            <option class="book__selectGuest" value="3">3 Взрослых</option>
-            <option class="book__selectGuest" value="4">4 Взрослых</option>
-            <option class="book__selectGuest" value="5">5 Взрослых</option>
-          </select> -->
         </label>
-
-        <button class="button book__btn button_dark">Забронировать</button>
+        <button class="button button_dark book__btn">Забронировать</button>
       </form>
     </section>
 
-    <!-- slider TODO -->
+    <!-- swiper houses mobile version -->
+
+    <section class="houses houses_index">
+      <!-- Swiper -->
+      <div class="container container_slider-box">
+        <h2 class="slider__heading">Домики BriVillage</h2>
+        <div class="swiper mySwiper_houses">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="show-houses__pic"
+                src="src/img/showHouses1.png"
+                alt="домик"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="show-houses__pic"
+                src="src/img/showHouses2.png"
+                alt="домик"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="show-houses__pic"
+                src="src/img/showHouses3.png"
+                alt="домик"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="show-houses__pic"
+                src="src/img/showHouses6.png"
+                alt="домик"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="src/img/showHouses7.png" alt="домик" />
+            </div>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <svg
+            class="swiper-button-prev_houses swiper_top-btn"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="56" height="56" rx="10" fill="#3B9254" />
+            <path
+              d="M35 28H21"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M28 35L21 28L28 21"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <svg
+            class="swiper-button-next_houses swiper_top-btn"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="56" height="56" rx="10" fill="#3B9254" />
+            <path
+              d="M21 28H35"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M28 21L35 28L28 35"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
 
     <section class="show-houses container">
       <h2 class="show-houses__heading">Лучшие домики на природе</h2>
@@ -281,7 +365,10 @@
     <section class="servicesOffers container">
       <h2 class="servicesOffers__heading">Услуги и акции</h2>
       <div class="services__btns">
-        <button data-season="all" class="button services__btn">
+        <button
+          data-season="all"
+          class="button services__btn services__options"
+        >
           <svg
             width="24.000000"
             height="24.000000"
@@ -388,7 +475,10 @@
             </g>
           </svg>
           Все</button
-        ><button data-season="year" class="button services__btn">
+        ><button
+          data-season="year"
+          class="button services__btn services__options"
+        >
           <svg
             width="18.000000"
             height="18.000000"
@@ -409,7 +499,10 @@
           </svg>
 
           Круглый год</button
-        ><button data-season="summer" class="button services__btn">
+        ><button
+          data-season="summer"
+          class="button services__btn services__options"
+        >
           <svg
             width="20.037476"
             height="20.000000"
@@ -429,7 +522,10 @@
             />
           </svg>
           Лето</button
-        ><button data-season="winter" class="button services__btn">
+        ><button
+          data-season="winter"
+          class="button services__btn services__options"
+        >
           <svg
             width="24.000000"
             height="24.000000"
@@ -470,6 +566,41 @@
           Зима
         </button>
       </div>
+
+      <!-- mobile dropdown menu for seasons -->
+
+      <div class="dropdown">
+        <button class="dropdown__button dropdown__button_seasons button">
+          Все
+        </button>
+        <ul class="dropdown__list">
+          <li data-season="all" class="dropdown__list-item services__options">
+            Все
+          </li>
+          <li data-season="year" class="dropdown__list-item services__options">
+            Круглый год
+          </li>
+          <li
+            data-season="summer"
+            class="dropdown__list-item services__options"
+          >
+            Лето
+          </li>
+          <li
+            data-season="winter"
+            class="dropdown__list-item services__options"
+          >
+            Зима
+          </li>
+        </ul>
+        <input
+          type="text"
+          name="select-category"
+          value="2"
+          class="dropdown__input_hidden"
+        />
+      </div>
+
       <div class="services__images">
         <figure
           data-season="year"
@@ -903,7 +1034,7 @@
         <h2 class="reviews__heading">Отзывы наших гостей</h2>
         <div class="swiper mySwiper_reviews">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <article class="review-item">
                 <div class="review-item__heading">
                   <img
@@ -929,7 +1060,7 @@
                 </p>
               </article>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <article class="review-item">
                 <div class="review-item__heading">
                   <img
@@ -955,7 +1086,7 @@
                 </p>
               </article>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <article class="review-item">
                 <div class="review-item__heading">
                   <img
@@ -981,7 +1112,7 @@
                 </p>
               </article>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <article class="review-item">
                 <div class="review-item__heading">
                   <img
@@ -1223,15 +1354,28 @@
           &copy;&nbsp;BriVillage 2024. Все права защищены. Любое копирование
           информации возможно только с&nbsp;согласия правообладателя ресурса.
         </p>
-        <a class="footer__agreement" href="#">Договор оферты</a>
-        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <div class="footer__legal-links">
+          <a class="footer__agreement" target="_blank" href="#"
+            >Договор оферты</a
+          >
+          <a class="footer__policy" target="_blank" href="#"
+            >Политика конфиденциальности</a
+          >
+        </div>
       </div>
     </footer>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+        });
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="src/js/swiper.js"></script>
     <script src="src/airDatePicker/air-datepicker.js"></script>
     <script src="src/js/datePicker.js"></script>
-    <script src="src/js/main.js"></script>
+    <script src="src/js/dropdown.js"></script>
     <script src="src/js/options.js"></script>
   </body>
 </html>

@@ -66,6 +66,7 @@
         </summary>
 
         <nav class="mobile-menu__nav">
+          <h2 class="mobile-menu__heading">Меню</h2>
           <ul class="menu menu_column">
             <li class="menu__item">
               <a class="menu__link" href="index.html">Главная </a>
@@ -389,18 +390,18 @@
       <article class="information__contents">
         <h3 class="information__contents-heading">Цена проживания</h3>
         <div class="information__tiles-box">
-          <p class="information__tile">Вс - Чт: 7 000 ₽/сутки</p>
-          <p class="information__tile">Пт - Сб: 10 000 ₽/сутки</p>
+          <span class="information__tile">Вс - Чт: 7 000 ₽/сутки</span>
+          <span class="information__tile">Пт - Сб: 10 000 ₽/сутки</span>
         </div>
         <h3 class="information__contents-heading">Способы оплаты</h3>
         <div class="information__tiles-box">
-          <p class="information__tile">Оплата картой</p>
-          <p class="information__tile">Перевод на карту</p>
-          <p class="information__tile">Оплата наличными</p>
+          <span class="information__tile">Оплата картой</span>
+          <span class="information__tile">Перевод на карту</span>
+          <span class="information__tile">Оплата наличными</span>
         </div>
         <h3 class="information__contents-heading">Время заезда</h3>
         <div class="information__tiles-box">
-          <p class="information__tile">Заезд: 15:00 Выезд: 12:00</p>
+          <span class="information__tile">Заезд: 15:00 Выезд: 12:00</span>
         </div>
         <h3 class="information__contents-heading">Способы добраться:</h3>
         <div class="information__tiles-box">
@@ -550,25 +551,25 @@
         <h2 class="slider__heading">Услуги BriVillage</h2>
         <div class="swiper mySwiper_services">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="year">
                 <img src="src/img/service1.png" alt="баня" />
                 <figcaption class="services__image-desc">Общая баня</figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="year">
                 <img src="src/img/service2.png" alt="Рыбалка" />
                 <figcaption class="services__image-desc">Рыбалка</figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="winter">
                 <img src="src/img/service5.png" alt="Лыжи" />
                 <figcaption class="services__image-desc">Лыжи</figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="summer">
                 <img src="src/img/service6.png" alt="Велосипеды" />
                 <figcaption class="services__image-desc">
@@ -576,7 +577,7 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="summer">
                 <img src="src/img/service7.png" alt="Квадроциклы" />
                 <figcaption class="services__image-desc">
@@ -584,13 +585,13 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="summer">
                 <img src="src/img/service3.png" alt="Зоопарк" />
                 <figcaption class="services__image-desc">Зоопарк</figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="year">
                 <img src="src/img/service4.png" alt="яйца" />
                 <figcaption class="services__image-desc">
@@ -598,13 +599,13 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="summer">
                 <img src="src/img/service8.png" alt="сапдоски" />
                 <figcaption class="services__image-desc">Сап-доски</figcaption>
               </figure>
             </div>
-            <div class="swiper-slide swiper-slide_section">
+            <div class="swiper-slide">
               <figure data-season="year">
                 <img src="src/img/service9.png" alt="аренда" />
                 <figcaption class="services__image-desc">
@@ -835,8 +836,14 @@
             &copy;&nbsp;BriVillage 2024. Все права защищены. Любое копирование
             информации возможно только с&nbsp;согласия правообладателя ресурса.
           </p>
-          <a class="footer__agreement" href="#">Договор оферты</a>
-          <a class="footer__policy" href="#">Политика конфиденциальности</a>
+          <div class="footer__legal-links">
+            <a class="footer__agreement" target="_blank" href="#"
+              >Договор оферты</a
+            >
+            <a class="footer__policy" target="_blank" href="#"
+              >Политика конфиденциальности</a
+            >
+          </div>
         </div>
       </div>
     </footer>
